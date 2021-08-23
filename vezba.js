@@ -1,3 +1,6 @@
+// Variable scope
+
+/*
 const testFunction = function(numbers){
     let oddNumber = 3;
     for (let number in numbers){
@@ -19,3 +22,21 @@ var evenNumber = 4;
 console.log(oddNumber);
 
 testFunction([1,2,3,4,5]);
+
+*/
+
+// Map function
+
+let squareArray = function (numbers){
+  const newArray = numbers.map(number => Math.pow(number,2));
+  console.log(newArray);
+}
+
+squareArray([2,4,6]);
+
+// IIFE
+
+(() => {
+    console.log(2+4); 
+
+})()
