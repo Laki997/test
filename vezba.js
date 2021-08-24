@@ -80,7 +80,7 @@ for (var i =0; i < parsedArray.length;i++){
 
 // Arrays
 
-
+/*
 
 const colors = ['blue','yellow','red','green','gray'];
 
@@ -143,3 +143,60 @@ const zooInventory = (myZoo) => {
 }
 
 console.log(zooInventory(myZoo));
+
+*/
+
+
+// Classes
+
+
+
+class Person {
+    constructor(name, age, gender){
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+
+    getName(){
+        return this.name;
+    }
+
+    getAge(){
+        return this.getName;
+    }
+
+    getGender(){
+        return this.gender;
+    }
+}
+
+class Teacher extends Person {
+    constructor(name,age,gender,subject){
+        super(name,age,gender);
+        this.subject = subject;
+    }
+
+    getSubject(){
+        return this.subject;
+    }
+}
+
+class Student extends Person{
+    constructor(name, age, gender, marks){
+        super(name,age,gender);
+        this.marks = marks;
+    }
+
+    getMarks(){
+        return this.marks;
+    }
+}
+
+const teacher = new Teacher('Biljana Sijakov',55,'female','Maths');
+const student = new Student('Lazar Kalajdzic',23,'male',95);
+
+console.log(teacher.getSubject());
+
+
+
