@@ -27,6 +27,8 @@ testFunction([1,2,3,4,5]);
 
 // Map function
 
+
+
 let squareArray = function (numbers){
   const newArray = numbers.map(number => Math.pow(number,2));
   console.log(newArray);
