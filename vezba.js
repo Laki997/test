@@ -27,7 +27,7 @@ testFunction([1,2,3,4,5]);
 
 // Map function
 
-
+/*
 
 let squareArray = function (numbers){
   const newArray = numbers.map(number => Math.pow(number,2));
@@ -50,5 +50,15 @@ const num = number => number*2;
 
 console.log(num(5));
 
+*/
+
+
+let arrayJSON = '["1","2","3","4","5"]';
+
+let parsedArray = JSON.parse(arrayJSON);
+
+parsedArray.forEach(element => {
+    console.log(element);
+});
 
 
