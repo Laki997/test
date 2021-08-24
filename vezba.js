@@ -44,7 +44,7 @@ console.log(multiply);
 
 // Array function
 
-let num = number => number*2;
+const num = number => number*2;
 
 console.log(num(5));
 
