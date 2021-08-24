@@ -38,33 +38,20 @@ squareArray([2,4,6]);
 
 // IIFE
 
-(() => {
-    console.log(2+4); 
+const multiply = ((a,b) =>{
+    return a*b;
+})(5,10)
 
-})()
+console.log(multiply);
+
+// Array function
+
+const num = number => number*2;
+
+console.log(num(5));
 
 */
 
-// JS and JSON
-
-const personJS = {
-    firstName:'Lazar',
-    lastNme:'Kalajdzic',
-    age:23
-}
-
-
-
-personJSON = '{"firstName":"lazar","lastName":"kalajdzic","age":"23"}';
-
-const fromJSONToJSObject = JSON.parse(personJSON);
-const fromJSToJSON = JSON.stringify(personJS)
-
-console.log(fromJSONToJSObject);
-console.log(fromJSToJSON);
-
-
-let arrayJS = [1,2,3,4,5];
 
 let arrayJSON = '["1","2","3","4","5"]';
 
@@ -73,3 +60,5 @@ let parsedArray = JSON.parse(arrayJSON);
 parsedArray.forEach(element => {
     console.log(element);
 });
+
+
