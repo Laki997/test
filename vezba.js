@@ -36,7 +36,17 @@ squareArray([2,4,6]);
 
 // IIFE
 
-(() => {
-    console.log(2+4); 
+const multiply = ((a,b) =>{
+    return a*b;
+})(5,10)
 
-})()
+console.log(multiply);
+
+// Array function
+
+let num = number => number*2;
+
+console.log(num(5));
+
+
+
