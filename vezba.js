@@ -70,6 +70,6 @@ let arrayJSON = '["1","2","3","4","5"]';
 
 let parsedArray = JSON.parse(arrayJSON);
 
-for (var i =0; i < parsedArray.length;i++){
-    console.log(parsedArray[i]);
-}
+parsedArray.forEach(element => {
+    console.log(element);
+});
