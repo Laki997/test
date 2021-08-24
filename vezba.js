@@ -197,6 +197,49 @@ const teacher = new Teacher('Biljana Sijakov',55,'female','Maths');
 const student = new Student('Lazar Kalajdzic',23,'male',95);
 
 console.log(teacher.getSubject());
+console.log(student.getMarks());
 
 
+function PersonP(name, age, gender){
+    this.name = name;
+    this.age = age;
+    this.gender = gender;
+}
 
+PersonP.prototype.getName = function(){
+    return this.name;
+}
+
+PersonP.prototype.getAge = function(){
+    return this.age;
+}
+
+PersonP.prototype.getGender = function(){
+    return this.gender;
+}
+
+
+function TeacherP(name, age, gender, subject){
+    PersonP.call(this, name, age, gender);
+    this.subject = subject;
+}
+
+TeacherP.prototype = Object.create(PersonP.prototype);
+
+TeacherP.prototype.getSubject = function(){
+    return this.subject;
+}
+
+function StudentP(name, age, gender, marks){
+    PersonP.call(this, name, age, gender);
+    this.marks = marks;
+}
+
+StudentP.prototype = Object.create(PersonP.prototype);
+
+
+const teacher2 = new TeacherP('Dusica Copic',52,'female','History');
+const student2 = new StudentP('Milos Bakmaz',24,'male',95);
+
+console.log(teacher2);
+console.log(student2);
