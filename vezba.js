@@ -243,3 +243,79 @@ const student2 = new StudentP('Milos Bakmaz',24,'male',95);
 
 console.log(teacher2);
 console.log(student2);
+
+
+
+
+// arrow vs es5 functions
+
+
+var cars = {
+    models:['mercedes','volvo','renault'],
+    owner:'Petar',
+    description: function(){
+        return this.models.map(function(model){
+           return  `${this.owner} has car named ${model} `
+        });
+    }
+};
+
+console.log(cars.description());
+
+// Ovo nece raditi zato sto se this odnosi na samu funkciju koja ja pozvala,
+// a ona ne zna ko je "owner. Ovo se moze resiti pomocu bind(this)
+// kreiranja pomocne variable, ali je mnogo bolje u ovom slucaju
+// koristiti arrow function
+
+
+var cars = {
+    models:['mercedes','volvo','renault'],
+    owner:'Petar',
+    description: function(){
+        return this.models.map((model) =>{
+           return  `${this.owner} has car named ${model} `
+        });
+    }
+};
+
+console.log(cars.description());
+
+// arrow funkcije ne menjaju svoj this context za razliku od klasicnih funkcija
+// koje ga menjaju u odnosu na kontekst u kom je funkcija pozvana.
+
+
+// Promises and async/await
+
+const checkNum = (num) => {
+    return new Promise((res, rej) => {
+        if (num > 5){
+            res(`${num} je vece od 5`);
+        } else {
+            rej(`${num} je manje od 5`);
+        }
+    });
+};
+
+checkNum(2).then((res) => {
+    console.log(res);
+}).catch((rej) => {console.log(rej)});
+
+
+
+const testAsyncFunction = async (num) => {
+    try {
+        const result = await checkNum(num);
+        console.log(result);
+    } catch(e){
+
+        console.log(e);
+    }
+
+}
+
+
+testAsyncFunction(4);
+
+// async/await je mozda bolje korsititi kada imamo ugnjezdene promise kako izbegli
+// mnogo povezanih .then() komandi gde mozemo pomoci await da storujemo podatke u promenljivu.
+// kada koristimo await on mora biti u okviru asinhrone funkcije
