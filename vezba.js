@@ -127,7 +127,7 @@ console.log(zooInventory(myZoo));
 
 // Classes
 
-
+/*
 
 class Person {
     constructor(name, age, gender){
@@ -299,5 +299,51 @@ testAsyncFunction(4);
 // kada koristimo await on mora biti u okviru asinhrone funkcije
 
 
+*/
 
+
+let firstPromise = new Promise((res, rej)=>{
+    setTimeout(()=>{
+        const result = multiplyNumbers(2,6);
+        if (result > 10){
+            res('Success!');
+        } else {
+            rej('ERROR!');
+        }
+    },2000)
+})
+
+function multiplyNumbers(a,b){
+   return a*b;
+}
+
+firstPromise.then((val)=>{
+   console.log(val);
+}).catch((err=>{
+    console.log(err);
+}))
+
+
+
+
+const secondPromise  = (a,b) => {
+
+    setTimeout(()=>{
+       if (a*b > 10){
+           console.log('Success!');
+       } else {
+           console.log('Error!');
+       }
+    },4000)
+}
+
+async function resolvedPromise(){
+    try {
+        await secondPromise(2,1);
+    } catch(e){
+        console.log(e);
+    }
+}
+
+resolvedPromise();
 
