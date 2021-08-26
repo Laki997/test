@@ -132,9 +132,9 @@ class LogAction{
 
  pacijent.odaberiDoktora(doktor);
 
- pregled1 = new PregledNivoSeceraUKrvi('07-11-2005','09:00',pacijent);
+pregled1 = new PregledNivoSeceraUKrvi('07-11-2005','09:00',pacijent);
 doktor.zakaziPregled(pregled1);
- pregled2 = new PregledKrvniPritisak('07-11-2005','09:00',pacijent);
+pregled2 = new PregledKrvniPritisak('07-11-2005','09:00',pacijent);
 doktor.zakaziPregled(pregled2);
 pregled1.obaviPregled();
 pregled2.obaviPregled();
