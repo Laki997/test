@@ -14,7 +14,7 @@ class PregledKrvniPritisak extends Pregled {
     }
 
     rezultatiPregleda(){
-        console.log(`Gornja granica: ${this.gornjaGranica}, Donja Granica: ${this.donjaGranica} Puls: ${this.puls} `);
+       return `Gornja granica: ${this.gornjaGranica}, Donja Granica: ${this.donjaGranica} Puls: ${this.puls} `;
     }
 }
 
