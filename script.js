@@ -9,12 +9,12 @@ const pacijent = new Pacijent('Dragan','Kalajdzic','0711997800161','135125');
 
 pacijent.odaberiDoktora(doktor);
 
-const pregled1 = new PregledSecerUKrvi('07-11-2005','09:00',pacijent);
+const pregled1 = new PregledSecerUKrvi('07-11-2005','09:00',pacijent,'10','07:00');
 doktor.zakaziPregled(pregled1);
-const pregled2 = new PregledKrvniPritisak('07-11-2005','09:00',pacijent);
+const pregled2 = new PregledKrvniPritisak('07-11-2005','09:00',pacijent,'120','60',70);
 doktor.zakaziPregled(pregled2);
 pregled1.obaviPregled();
 pregled2.obaviPregled();
 
 console.log(logAction.dataList);
-logAction.makeTextFile(logAction.dataList);
+logAction.makeTextFile();

@@ -9,12 +9,14 @@ class Pacijent extends Osoba {
         super(ime, prezime);
         this.jmbg = jmbg;
         this.brojZdravstvenogKartona = brojZdravstvenogKartona;
-        logAction.logKreiranjePacijenta(this);
+        logAction.log(`Kreiran je pacijent ${this.ime} ${this.prezime}`);
     }
 
     odaberiDoktora(doktor){
       this.doktor = doktor;
-      logAction.logBiranjeLekara(this, this.doktor);
+      const message = `Pacijent ${this.ime} ${this.prezime} je izabrao doktora ${doktor.ime} ${doktor.prezime}`;
+      logAction.log(message);
+      doktor.dodeliPacijenta(this);
     }
 }
 
