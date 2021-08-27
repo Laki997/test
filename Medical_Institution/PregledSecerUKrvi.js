@@ -13,7 +13,7 @@ class PregledSecerUKrvi extends Pregled {
 
 
     rezultatiPregleda(){
-        return `Vrednost holesterola: ${this.vrednost}, vreme poslednjeg obroka ${this.vremePoslednjegObroka}`;
+        return `Vrednost secera: ${this.vrednost}, vreme poslednjeg obroka ${this.vremePoslednjegObroka}`;
     }
 
 }
