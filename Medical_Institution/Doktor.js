@@ -15,7 +15,7 @@ class Doktor extends Osoba{
     }
 
     dodeliPacijenta(pacijent){
-        this.pacijenti = pacijent;
+        this.pacijenti.push(pacijent);
     }
 }
 

@@ -6,8 +6,10 @@ import {logAction}  from './Medical_Institution/LogAction.js';
 
 const doktor = new Doktor('Milan','Kalajdzic','kardiolog');
 const pacijent = new Pacijent('Dragan','Kalajdzic','0711997800161','135125');
+const pacijent2 = new Pacijent('Dragan','Kalajdzic','0711997dsd800161','135125');
 
 pacijent.odaberiDoktora(doktor);
+pacijent2.odaberiDoktora(doktor);
 
 const pregled1 = new PregledSecerUKrvi('07-11-2005','09:00',pacijent,'10','07:00');
 doktor.zakaziPregled(pregled1);
