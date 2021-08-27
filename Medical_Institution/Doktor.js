@@ -9,10 +9,19 @@ class Doktor extends Osoba{
         logAction.log(`Kreiran je doktor ${this.ime} ${this.prezime}`);
         this.pacijenti = [];
     }
-
+    
+    
     zakaziPregled(pregled){
-        console.log(`Zakazuje se pregled ${pregled.tip} za pacijenta ${pregled.pacijent.ime} ${pregled.pacijent.prezime} kod doktora ${this.ime} ${this.prezime}`);
+
+        console.log(`Zakazan je pregled ${pregled.tip} za pacijenta ${pregled.pacijent.ime} ${pregled.pacijent.prezime}`);
+
+        this.obaviPregled(pregled);
+    
     }
+    
+    obaviPregled(pregled){
+        logAction.log(`Obavljen pregled ${pregled.tip} za pacijenta ${pregled.pacijent.ime} ${pregled.pacijent.prezime}. Rezultat pregleda: ${pregled.rezultatiPregleda()} `);
+     }
 
     dodeliPacijenta(pacijent){
         this.pacijenti.push(pacijent);

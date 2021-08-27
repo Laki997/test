@@ -15,8 +15,7 @@ const pregled1 = new PregledSecerUKrvi('07-11-2005','09:00',pacijent,'10','07:00
 doktor.zakaziPregled(pregled1);
 const pregled2 = new PregledKrvniPritisak('07-11-2005','09:00',pacijent,'120','60',70);
 doktor.zakaziPregled(pregled2);
-pregled1.obaviPregled();
-pregled2.obaviPregled();
+// pregled1.obaviPregled();
+// pregled2.obaviPregled();
 
-console.log(logAction.dataList);
 logAction.makeTextFile();

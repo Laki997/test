@@ -13,8 +13,8 @@ class PregledKrvniPritisak extends Pregled {
      
     }
 
-    obaviPregled(){
-       logAction.log(`Pregled ${this.tip} za pacijenta ${this.pacijent.ime} ${this.pacijent.prezime}: pritisak je ${this.gornjaGranica} ${this.donjaGranica} i puls je ${this.puls}`);
+    rezultatiPregleda(){
+        console.log(`Gornja granica: ${this.gornjaGranica}, Donja Granica: ${this.donjaGranica} Puls: ${this.puls} `);
     }
 }
 

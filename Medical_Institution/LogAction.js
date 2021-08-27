@@ -22,30 +22,6 @@ class LogAction{
         return this.textFile;
     }
 
-    //  logKreiranjeDoktora(doktor){
-        
-    //     const data = `[${new Date().toLocaleDateString()} ${new Date().getHours()} ${new Date().getMinutes()} ${new Date().getSeconds()}] kreiran je doktor ${doktor.ime} ${doktor.prezime}`;
-    //     this.dataList.push(data);
-        
-    // }
-
-    //  logKreiranjePacijenta(pacijent){
-    //     const data = `[${new Date().toLocaleDateString()} ${new Date().getHours()} ${new Date().getMinutes()} ${new Date().getSeconds()}] kreiran je pacijent ${pacijent.ime} ${pacijent.prezime}`;
-    //     this.dataList.push(data);
-    // }
-
-    //  logBiranjeLekara(pacijent,doktor){
-    //     const data = `[${new Date().toLocaleDateString()} ${new Date().getHours()} ${new Date().getMinutes()} ${new Date().getSeconds()}] pacijent ${pacijent.ime} je izabrao lekara ${doktor.ime}`;
-    //     this.dataList.push(data);
-        
-    // }
-
-    //  logObavljanjePregleda(pregled){
-    //     const data = `[${new Date().toLocaleDateString()} ${new Date().getHours()} ${new Date().getMinutes()} ${new Date().getSeconds()}] pacijent ${pregled.pacijent.ime} je izvrsio pregled ${pregled.tip}`;
-    //     this.dataList.push(data);
-       
-    // }
-
     log(message){
         const data = `[${new Date().toLocaleDateString()} ${new Date().getHours()} ${new Date().getMinutes()} ${new Date().getSeconds()}] ${message}`;
         this.dataList.push(data);

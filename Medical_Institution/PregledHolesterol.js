@@ -11,9 +11,10 @@ class PregledHolesterol extends Pregled {
        
     }
 
-    obaviPregled(){
-        logAction.log(`Pregled holestera za pacijenta ${this.this.pacijent.ime} ${this.pacijent.ime}: vrednost: ${this.vrednost}, a vreme poslednjeg obroka ${this.vremePoslednjegObroka}`);
+    rezultatiPregleda(){
+        console.log(`Vrednost holesterola: ${this.vrednost}, vreme poslednjeg obroka ${this.vremePoslednjegObroka}`);
     }
+
 }
 
 export default PregledHolesterol;

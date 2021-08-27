@@ -11,9 +11,11 @@ class PregledSecerUKrvi extends Pregled {
       
     }
 
-    obaviPregled(){  
-          logAction.log(`Pregled secera za pacijenta ${this.pacijent.ime} ${this.pacijent.prezime}: vredonost je ${this.vrednost}, a vreme poslednjeg obroka je ${this.vremePoslednjegObroka} `);
+
+    rezultatiPregleda(){
+        console.log(`Vrednost holesterola: ${this.vrednost}, vreme poslednjeg obroka ${this.vremePoslednjegObroka}`);
     }
+
 }
 
 export default PregledSecerUKrvi;
