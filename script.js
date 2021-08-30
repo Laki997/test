@@ -1,8 +1,8 @@
 import Doktor from './Medical_Institution/Doktor.js';
 import Pacijent from './Medical_Institution/Pacijent.js';
-import PregledSecerUKrvi from './Medical_Institution/PregledSecerUKrvi.js'
-import PregledKrvniPritisak from './Medical_Institution/PregledKrvniPritisak.js';
 import {logAction}  from './Medical_Institution/LogAction.js';
+import Pregled_types from './Medical_Institution/Pregled_types.js';
+
 
 const doktor = new Doktor('Milan','Kalajdzic','kardiolog');
 const pacijent = new Pacijent('Dragan','Kalajdzic','0711997800161','135125');
@@ -11,11 +11,9 @@ const pacijent2 = new Pacijent('Dragan','Kalajdzic','0711997dsd800161','135125')
 pacijent.odaberiDoktora(doktor);
 pacijent2.odaberiDoktora(doktor);
 
-const pregled1 = new PregledSecerUKrvi('07-11-2005','09:00',pacijent,'10','07:00');
-doktor.zakaziPregled(pregled1);
-const pregled2 = new PregledKrvniPritisak('07-11-2005','09:00',pacijent,'120','60',70);
-doktor.zakaziPregled(pregled2);
-// pregled1.obaviPregled();
-// pregled2.obaviPregled();
+const pregled = doktor.zakaziPregled(Pregled_types.SECER, pacijent);
+doktor.obaviPregled(pregled);
+const pregled2 = doktor.zakaziPregled(Pregled_types.HOLESTEROL,pacijent2);
+doktor.obaviPregled(pregled2);
 
 logAction.makeTextFile();

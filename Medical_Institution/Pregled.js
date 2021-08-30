@@ -8,9 +8,6 @@ class Pregled {
         this.pacijent = pacijent;
     }
  
-    obaviPregled(){
-        throw new Error('Abstract method!');
-    };
  }
 
  export default Pregled;
