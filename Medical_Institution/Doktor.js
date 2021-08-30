@@ -16,19 +16,16 @@ class Doktor extends Osoba{
     
     
     zakaziPregled(datum,vreme,type,pacijent){
-        let pregled;
         if (type === PREGLED_TYPES.SECER){
-            pregled = new PregledSecerUKrvi(datum,vreme,pacijent);
+            return new PregledSecerUKrvi(datum,vreme,pacijent);
         } else if (type === PREGLED_TYPES.PRITISAK){
-            pregled = new PregledKrvniPritisak(datum,vreme,pacijent);
+            return  new PregledKrvniPritisak(datum,vreme,pacijent);
         } else if(type === PREGLED_TYPES.HOLESTEROL){
-            pregled = new PregledHolesterol(datum,vreme,pacijent);
+            return new PregledHolesterol(datum,vreme,pacijent);
         } else {
             throw new Error('Nazalost pregled ne postoji!');
             return;
         }
-
-        return pregled;
     
     }
     
