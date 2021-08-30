@@ -3,6 +3,7 @@ import {logAction} from './LogAction.js';
 import PregledSecerUKrvi from './PregledSecerUKrvi.js';
 import PregledHolesterol from './PregledHolesterol.js';
 import PregledKrvniPritisak from './PregledKrvniPritisak.js';
+import {PREGLED_TYPES} from './constants.js';
 
 class Doktor extends Osoba{
    
@@ -14,14 +15,14 @@ class Doktor extends Osoba{
     }
     
     
-    zakaziPregled(type,pacijent){
+    zakaziPregled(datum,vreme,type,pacijent){
         let pregled;
-        if (type === 'secer'){
-            pregled = new PregledSecerUKrvi('07-11-2005','09:00',pacijent);
-        } else if (type === 'pritisak'){
-            pregled = new PregledKrvniPritisak('07-11-2005','09:00',pacijent);
-        } else if(type === 'holesterol'){
-            pregled = new PregledHolesterol('07-11-2005','09:00',pacijent);
+        if (type === PREGLED_TYPES.SECER){
+            pregled = new PregledSecerUKrvi(datum,vreme,pacijent);
+        } else if (type === PREGLED_TYPES.PRITISAK){
+            pregled = new PregledKrvniPritisak(datum,vreme,pacijent);
+        } else if(type === PREGLED_TYPES.HOLESTEROL){
+            pregled = new PregledHolesterol(datum,vreme,pacijent);
         } else {
             throw new Error('Nazalost pregled ne postoji!');
             return;

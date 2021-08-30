@@ -1,7 +1,5 @@
-const PREGLED_TYPES = {
+export const PREGLED_TYPES = {
     SECER:'secer',
     HOLESTEROL:'holesterol',
     PRITISAK:'pritisak'
 }
-
-export default PREGLED_TYPES;
